@@ -26,7 +26,7 @@ class Twitter2 :
 
     def ASK(self, message, screen_name):
         try:
-            print("ASKING")
+            print("tamin")
             message1 = message + " @" + screen_name
             api = self.init_tweepy()
             api.send_direct_message(recipient_id = constants.Admin_id, text = message1)

@@ -259,3 +259,15 @@ class Twitter:
             time.sleep(60)
             print(ex)
             pass
+    
+    def senddm(self, i, dmsender, status, postid=None, rttime=None):
+      api = self.api
+      url = 'https://twitter.com/'+self.me.screen_name+'/status/'+str(postid)
+      if status == 'sent':
+        message = {'sent': 'Post was successfully sent at '+rttime.astimezone(timezone(timedelta(hours=constants.timezone))).strftime("%Y-%m-%d %H:%M")+' WIB. Check your post here: '+url}
+
+      notifdm = api.send_direct_message(recipient_id=dmsender, text=message[status])
+
+      time.sleep(10)
+    
+      return                          

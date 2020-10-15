@@ -10,3 +10,4 @@ Second_Keyword = "[quote]" #for make image quoted
 Sub2_Keyword = "-s" #give image quoted name
 Third_keyword = "[tamin]" #ask admin
 Admin_id = "farhan_fadillaa"
+timezone = 7
